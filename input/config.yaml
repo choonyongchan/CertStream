@@ -1,0 +1,8 @@
+certstream:
+  server: 'wss://certstream.calidog.io'
+  input: 'input/input_regex.txt'
+  output: 'logs/CertStream.txt'
+
+database:
+  purge: True  # True if you wish to purge old data from the database (if present).
+  filename: 'logs/CertStream.db'
