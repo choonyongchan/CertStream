@@ -3,13 +3,6 @@ CertStream continuously monitors Certificate Transparency logs for newly
 registered domains. If the newly registered domain is a domain of intereest,
 the domain will be logged.
 """
-import os
-import sys
-if getattr(sys, 'frozen', False):  # Support correct detection of input files
-    os.chdir(os.path.dirname(sys.executable))
-elif __file__:
-    os.chdir(os.path.dirname(__file__))
-
 import certstream
 import re
 
@@ -108,10 +101,3 @@ class CertStream:
         # Shutdown procedure
         self.database.export()
         Logger.info('CertStream has been shutdown.')
-
-
-if __name__ == "__main__":
-    """Main code to start certstream.
-    """
-    cs: certstream = CertStream()
-    cs.start()
