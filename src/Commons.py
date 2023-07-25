@@ -242,9 +242,10 @@ class Sanitiser:
         sanitised: set[str] = set()
         for d in domains:
             # Proper format for urlparse
-            d = f'http://{d}' if '//' not in d[:8] else d
-            d = urlparse(d).netloc  # Extract domain
-            d = d.removeprefix('www.').removeprefix('*.')
+            d: str = d.removeprefix('http://').removeprefix('https://')
+            d: str = f"//{d}"
+            d: str = urlparse(d).netloc  # Extract domain
+            d: str = d.removeprefix('www.').removeprefix('*.')
             sanitised.add(d)
         return list(sanitised)
 

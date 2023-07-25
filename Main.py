@@ -1,3 +1,5 @@
+"""This module starts CertStream.
+"""
 import os
 import sys
 if getattr(sys, 'frozen', False):  # Support correct detection of input files
@@ -10,7 +12,9 @@ import certstream
 from src.CertStream import CertStream
 
 
-def main():
+def main() -> None:
+    """Main Program of CertStream.
+    """
     cs: certstream = CertStream()
     cs.start()
 
