@@ -73,9 +73,6 @@ class Database:
         Returns:
             pd.DataFrame | None: Results of SQL Command.
         """
-        # TEST: Assert command is not empty.
-        assert (command)
-
         try:
             if command.lower().startswith('select'):
                 return pd.read_sql(command, self.con)
@@ -108,9 +105,6 @@ class FileHandler:
         Args:
             filename (str): Name of file to check.
         """
-        # TEST: Assert filename is not empty and checks are valid
-        assert (filename)
-
         # Create file if doesn't exist
         if not os.path.exists(filename):
             file: Path = Path(filename)
@@ -136,9 +130,6 @@ class FileHandler:
         Returns:
             list[str]: Lines of Text from file.
         """
-        # TEST: Assert filename is not empty.
-        assert (filename)
-
         FileHandler.check_availability(filename)
         with open(filename, 'r') as f:
             datalines: list[str] = f.read().splitlines()
@@ -153,9 +144,6 @@ class FileHandler:
             filename (str): Output filename.
             datalines (list[str]): Lines of Data to write.
         """
-        # TEST: Assert filename is not empty.
-        assert (filename and datalines)
-
         FileHandler.check_availability(filename)
         with open(filename, 'a+') as f:
             f.write('\n'.join(datalines) + '\n')
@@ -164,9 +152,6 @@ class FileHandler:
     def clear(filename: str) -> None:
         """Clear data from disk.
         """
-        # TEST: Assert filename is not empty.
-        assert (filename)
-
         FileHandler.check_availability(filename)
         with open(filename, 'w'):
             pass
@@ -185,9 +170,6 @@ class Logger:
             filename (str): Name of log file.
                 Defaults to DEFAULT_LOGIFLE.
         """
-        # TEST: Assert filename is not empty.
-        assert (filename)
-
         FileHandler.check_availability(filename)  # Create /logs if needed.
         logging.basicConfig(
             filename=filename,
@@ -211,9 +193,6 @@ class Logger:
         Returns:
             callable: Function with logging.
         """
-        # TEST: Assert log message is present.
-        assert (msg)
-
         def decorator(f: callable) -> callable:
             @wraps(f)  # Helps with documentation.
             def wrapper(*args, **kwargs):
@@ -224,24 +203,16 @@ class Logger:
 
     @staticmethod
     def info(msg: str) -> None:
-        # TEST: Assert msg is not empty.
-        assert (msg)
-
         Logger.LOGGER.info(msg)
         print(msg)
 
     @staticmethod
     def warning(msg: str) -> None:
-        assert (msg)
-
         Logger.LOGGER.warning(msg)
         print(msg)
 
     @staticmethod
     def exception(e: Exception, msg: str = '') -> None:
-        # TEST: Assert e is not empty.
-        assert (e)
-
         if not msg:
             msg = str(e)
         msg: str = f'{type(e).__name__}: {msg}'
@@ -295,10 +266,6 @@ class Utils:
         Returns:
             dict: Key-Value pairs of Configuration field.
         """
-
-        # TEST: Assert filename is not empty.
-        assert (filename)
-
         FileHandler.check_availability(filename)
         with open(filename, 'r') as f:
             return yaml.safe_load(f)

@@ -15,6 +15,7 @@ class CertStream:
     DEFAULT_INPUT: str = 'input/input_regex.txt'
     DEFAULT_OUTPUT: str = 'logs/certstream.txt'
 
+    @Logger.log('Initialising CertStream')
     def __init__(self):
         config: dict = Utils.load_config()
 
@@ -46,6 +47,7 @@ class CertStream:
         self.pattern: re.Pattern = self.compile_regexes(regexes)
         self.database: Database = Database(config)
 
+    @Logger.log('Compiling Regexes')
     def compile_regexes(self, regexes: list[str]) -> str:
         """This method compiles regexes into a single regex.
         """
@@ -92,12 +94,14 @@ class CertStream:
                 Logger.info(f'New Domain: {d}')
             self.database.insert(relv_domains)
 
+    @Logger.log('Starting CertStream.')
     def start(self):
         """This method starts CertStream. Blocking code!
         """
-        Logger.info('CertStream has started.')
+        Logger.info('CertStream Start')
         # Blocking Code.
         certstream.listen_for_events(self.callback, url=self.ctserver)
         # Shutdown procedure
+        Logger.info('Listening Stopped. Please wait for the export.')
         self.database.export()
-        Logger.info('CertStream has been shutdown.')
+        Logger.info('CertStream Shutdown.')
