@@ -23,7 +23,6 @@ Key Features:
 
 * Retrieve domains from Certificate Transparency's vast network of monitors.
 * Filters for domains of interest with one or more capture regexes.
-* Integrates seamlessly with Group IB's Digital Risk Protection Tools.
 * Stores domains of interest into a SQLite database.
 
 > 💡 CertStream only requires one command to start. CertStream is user-friendly!
