@@ -176,7 +176,7 @@ Given below is a scenario of how running Main.py behaves at each step.
 
 Step 1. The user first launches CertStream by executing `python3 Main.py` on the Terminal/Command Prompt.
 
-Step 2. `Main` calibrates the working directory to the directory where `Main.py` is located, and initialises `CertStream`
+Step 2. `Main` calibrates the working directory to the directory where `Main.py` is located, and initialises `CertStream`.
 
 Step 3. `Facade` grabs the configuration fields from the configuration file (default: `config.yaml`), and initialises the Certificate Transparency monitor server, output filename, regexes to monitor and `Database`.
 

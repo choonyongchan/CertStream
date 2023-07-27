@@ -8,6 +8,7 @@ Welcome to CertStream! Choose a section from the table of contents below to find
 
 1. [Introduction to CertStream](#introduction-to-certstream)
 2. [Quick Start](#quick-start)
+3. [Configuration](#configuration)
 3. [Feedback](#feedback)
 4. [Authors](#authors)
 
@@ -34,58 +35,85 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 
 ## Quick Start
 
-1. Open the `/input` folder, and edit `input_regex.txt` using any text editor.
+1. Download `CertStream.zip` [here](https://github.com/choonyongchan/CertStream/releases/download/v1.0/CertStream.zip), and extract `CertStream.zip` to any folder.
 
-![quickstart1](docs/images/quickstart1.png)
+![quickstart1](docs/images/quickstart0.png)
 
-2. Add one or more regexes, and save the file. CertStream will capture domains that matches any of these regexes.
+2. Open the `/input` folder, and edit `input_regex.txt` using any text editor.
 
-![quickstart2](docs/images/quickstart2.png)
+![quickstart2](docs/images/quickstart1.png)
 
-3. Navigate back to the previous folder.
+3. Add one or more regexes for CertStream to monitor, and save the file. 
 
-4. Open Command Prompt/Terminal on the home folder. For Windows users, follow the instructions below.
+    CertStream will capture domains that matches any of the regexes.
 
-    1. Ensure you are using File Explorer (Windows' default file manager).
+    (e.g. The domain `google123.com` will be captured using the regexes below.)
 
-    2. Press `Alt` + `D` to highlight the address bar.
+![quickstart3](docs/images/quickstart2.png)
 
-    ![quickstart3](docs/images/quickstart3.png)
+4. Navigate back to the previous folder.
 
-    3. Type `cmd`, and press `Enter` to launch Command Prompt on your current folder.
+![quickstart4](docs/images/quickstart0.png)
 
-    ![quickstart4](docs/images/quickstart4.png).
+5. Open Command Prompt/Terminal on the home folder. For Windows users, follow the instructions below.
 
-5. [Optional, but Highly Recommended] Setup Virtual Environment to isolate CertStream from your system. [Instructions here](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments).
+    1. Click on the address bar.
 
-6. Type this command to download the necessary dependencies/libraries for CertStream, and launch CertStream. This code runs indefinitely until terminated.
+    ![quickstart5](docs/images/quickstart3.png)
+
+    3. Type `cmd`, and press `Enter` to launch Command Prompt.
+
+    ![quickstart6](docs/images/quickstart4.png).
+
+6. Copy each command below, and press `Enter` to start CertStream. 
+
+    CertStream will run indefinitely.
 
 ```
-python3 -m pip -r src/requirements.txt
+python3 -m pip install -r src/requirements.txt
 python3 Main.py
 ```
 
-![quickstart3](docs/images/quickstart5.png)
+![quickstart7](docs/images/quickstart5.png)
 
-7. To terminate CertStream, press CTRL+C once or twice. Before termination, domains stored in the database is exported to a text output file.
+7. To stop CertStream, press CTRL+C (You may need to press a few times). 
+
+    Domains captured is exported to an output file.
 
 > 💡 More time is needed for export when the number of domains stored is large.
 
-![quickstart4](docs/images/quickstart6.png)
+![quickstart8](docs/images/quickstart6.png)
 
-8. Open the `/logs` folder. 
+8. Open the new `/logs` folder. 
 
-![quickstart4](docs/images/quickstart7.png)
+![quickstart9](docs/images/quickstart9.png)
 
-   You will find the `CertStream.db` database file, `CertStream.log` log file, and `CertStream.txt` output file.
+   You will find the `CertStream.txt` output file.
 
 9. Open `CertStream.txt` to view the captured domains. 
 
-![quickstart5](docs/images/quickstart8.png)
+![quickstart10](docs/images/quickstart8.png)
+
+--------------------------------------------------------------------------------------------------------------------
+
+## Configuration
+
+You can customise CertStream's configuration to suit your workflow.
+
+1. Open the `/input` folder, and edit `config.yaml` using any text editor.
+
+![config1](docs/images/config1.png)
+
+2. You may customise the input/output filenames and other settings. Save the file.
+
+![config2](docs/images/config2.png)
+
+3. Run CertStream as usual. Refer to [Quick Start Step 4](#quick-start).
 
 --------------------------------------------------------------------------------------------------------------------
 
 ## Feedback
+
 CertStream is a pilot program. Any feedback is appreciated while we develop CertStream. To deposit ideas and comments, create a new Issue on Github!
 
 --------------------------------------------------------------------------------------------------------------------
