@@ -36,11 +36,11 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 
 1. Download `CertStream.zip` [here](https://github.com/choonyongchan/CertStream/releases/download/v1.0/CertStream.zip), and extract `CertStream.zip` to any folder.
 
-![quickstart1](docs/images/quickstart0.png)
+<img src="docs/images/quickstart0.png" alt="quickstart0" width="400"/>
 
 2. Open the `/input` folder, and edit `input_regex.txt` using any text editor.
 
-![quickstart2](docs/images/quickstart1.png)
+<img src="docs/images/quickstart1.png" alt="quickstart" width="400"/>
 
 3. Add one or more regexes for CertStream to monitor, and save the file. 
 
@@ -48,32 +48,29 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 
     (e.g. The domain `google123.com` will be captured using the regexes below.)
 
-![quickstart3](docs/images/quickstart2.png)
+<img src="docs/images/quickstart2.png" alt="quickstart2" width="400"/>
 
 4. Navigate back to the previous folder.
 
-![quickstart4](docs/images/quickstart0.png)
+<img src="docs/images/quickstart0.png" alt="quickstart0" width="400"/>
 
 5. Open Command Prompt/Terminal on the home folder. For Windows users, follow the instructions below.
 
     1. Click on the address bar.
 
-    ![quickstart5](docs/images/quickstart3.png)
+    <img src="docs/images/quickstart3.png" alt="quickstart3" width="400"/>
 
     3. Type `cmd`, and press `Enter` to launch Command Prompt.
 
-    ![quickstart6](docs/images/quickstart4.png).
+    <img src="docs/images/quickstart4.png" alt="quickstart4" width="400"/>
 
 6. Copy each command below, and press `Enter` to start CertStream. 
-
-    CertStream will run indefinitely.
 
 ```
 python3 -m pip install -r src/requirements.txt
 python3 Main.py
 ```
-
-![quickstart7](docs/images/quickstart5.png)
+<img src="docs/images/quickstart5.png" alt="quickstart5" width="400"/>
 
 7. To stop CertStream, press CTRL+C (You may need to press a few times). 
 
@@ -81,17 +78,18 @@ python3 Main.py
 
 > 💡 More time is needed for export when the number of domains stored is large.
 
-![quickstart8](docs/images/quickstart6.png)
+<img src="docs/images/quickstart6.png" alt="quickstart6" width="400"/>
 
 8. Open the new `/logs` folder. 
 
-![quickstart9](docs/images/quickstart9.png)
+<img src="docs/images/quickstart9.png" alt="quickstart9" width="400"/>
 
    You will find the `CertStream.txt` output file.
 
 9. Open `CertStream.txt` to view the captured domains. 
 
-![quickstart10](docs/images/quickstart8.png)
+<img src="docs/images/quickstart8.png" alt="quickstart8" width="400"/>
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -101,11 +99,12 @@ You can customise CertStream's configuration to suit your workflow.
 
 1. Open the `/input` folder, and edit `config.yaml` using any text editor.
 
-![config1](docs/images/config1.png)
+<img src="docs/images/config1.png" alt="config1" width="400"/>
 
 2. You may customise the input/output filenames and other settings. Save the file.
 
-![config2](docs/images/config2.png)
+<img src="docs/images/config2.png" alt="config2" width="400"/>
+
 
 3. Run CertStream as usual. Refer to [Quick Start Step 4](#quick-start).
 
