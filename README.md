@@ -34,6 +34,8 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 
 ## Quick Start
 
+> 💡 Ensure Python is installed on your computer. Download [here](https://wiki.python.org/moin/BeginnersGuide/Download).
+
 1. Download `CertStream.zip` [here](https://github.com/choonyongchan/CertStream/releases/download/v1.0/CertStream.zip), and extract `CertStream.zip` to any folder.
 
 <img src="docs/images/quickstart0.png" alt="quickstart0" width="400"/>
@@ -67,10 +69,12 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 6. Copy each command below, and press `Enter` to start CertStream. 
 
 ```
-python3 -m pip install -r src/requirements.txt
-python3 Main.py
+python -m pip install -r src/requirements.txt
+python Main.py
 ```
 <img src="docs/images/quickstart5.png" alt="quickstart5" width="400"/>
+
+> 💡 If the above command returns an error, you may replace `python` with `python3`
 
 7. To stop CertStream, press CTRL+C (You may need to press a few times). 
 

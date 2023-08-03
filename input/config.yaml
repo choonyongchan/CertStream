@@ -1,8 +1,8 @@
 certstream:
-  server: 'wss://certstream.calidog.io'
-  input: 'input/input_regex.txt'
-  output: 'logs/CertStream.txt'
+  server: 'wss://certstream.calidog.io'  # Server to capture CertStream logs. Do not change, as our code is designed to work with this server.
+  input: 'input/input_regex.txt'  # Filename of input regex file.
+  output: 'logs/CertStream.txt'  # Filename of output captured domains file.
 
 database:
   purge: True  # True if you wish to purge old data from the database (if present).
-  filename: 'logs/CertStream.db'
+  filename: 'logs/CertStream.db'  # Filename of intermediary SQLite database file.

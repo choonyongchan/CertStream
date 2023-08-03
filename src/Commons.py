@@ -16,7 +16,7 @@ class Database:
     """
 
     DEFAULT_DB_FILE: str = 'logs/CertStream.db'
-    DEFAULT_OUTPUT: str = 'logs/CertStream.csv'
+    DEFAULT_OUTPUT: str = 'logs/CertStream.txt'
 
     def __init__(self, config: dict) -> None:
         """Initialise Database with input configuration.
