@@ -28,18 +28,6 @@ class CertStream:
                 ctserver: str = CertStream.DEFAULT_CTSERVER
             return ctserver
 
-        def read_output() -> str:
-            try:
-                output: str = str(config['certstream']['output'])
-            except Exception:
-                Logger.warning('Output filename not found. '
-                               f'Defaulting to {CertStream.DEFAULT_OUTPUT}')
-                output: str = CertStream.DEFAULT_OUTPUT
-            finally:
-                FileHandler.check_availability(output)
-                FileHandler.clear(output)
-            return output
-
         def read_regex() -> re.Pattern:
 
             def compile_regexes(regexes: list[str]) -> str:
@@ -80,7 +68,6 @@ class CertStream:
 
         config: dict = Utils.load_config()
         self.ctserver: str = read_ctserver()
-        self.output: str = read_output()
         self.pattern: re.Pattern = read_regex()
         self.database: Database = Database(config)
 

@@ -36,6 +36,8 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 
 ## Quick Start
 
+> 💡 Ensure Python is installed on your computer. Download [here](https://wiki.python.org/moin/BeginnersGuide/Download).
+
 1. Download `CertStream.zip` [here](https://github.com/choonyongchan/CertStream/releases/download/v1.0/CertStream.zip), and extract `CertStream.zip` to any folder.
 
 <img src="docs/images/quickstart0.png" alt="quickstart0" width="400"/>
