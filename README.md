@@ -2,6 +2,8 @@
 
 Welcome to CertStream! Choose a section from the table of contents below to find step-by-step guides on how to use CertStream.
 
+> 💡 Updates: Google Colab version out [here](https://colab.research.google.com/drive/1GxTKUsq54Xt9mdvqI7q-C9oT383PRoCh?usp=sharing).
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Table of Contents
@@ -67,10 +69,12 @@ We are confident that CertStream will enhance your efficiency as Cybersecurity R
 6. Copy each command below, and press `Enter` to start CertStream. 
 
 ```
-python3 -m pip install -r src/requirements.txt
-python3 Main.py
+python -m pip install -r src/requirements.txt
+python Main.py
 ```
 <img src="docs/images/quickstart5.png" alt="quickstart5" width="400"/>
+
+> 💡 If the above command throws an error, try replacing `python` with `python3`.
 
 7. To stop CertStream, press CTRL+C (You may need to press a few times). 
 
@@ -104,7 +108,6 @@ You can customise CertStream's configuration to suit your workflow.
 2. You may customise the input/output filenames and other settings. Save the file.
 
 <img src="docs/images/config2.png" alt="config2" width="400"/>
-
 
 3. Run CertStream as usual. Refer to [Quick Start Step 4](#quick-start).
 
